@@ -10,9 +10,10 @@ Login Success Test
     Create Webdriver    ${BROWSER}     executable_path=C:/Program Files/Python/Scripts/chromedriver.exe
     Go To   ${LOGIN URL}
     Set Browser Implicit Wait    4
-    Input Text     id=email          vylethe@gmail.com
+    Input Text     id=email          hoanggnhungg99@gmail.com
+    Sleep    1
     Input Text     id=password             123
-    Sleep    2
+    Sleep    1
     Click Button    id=btnLogin 
     Element Text Should Be    id=msgS    Login Successfully    
     Sleep    2    
@@ -24,9 +25,10 @@ Validate Email Test
     Create Webdriver    ${BROWSER}     executable_path=C:/Program Files/Python/Scripts/chromedriver.exe
     Go To   ${LOGIN URL} 
     Set Browser Implicit Wait    4
-    Input Text    id=email    vylethe123@gmail.com
+    Input Text    id=email    hoanggnhungg999@gmail.com
+    Sleep    1
     Input Password    id=password    123
-    Sleep    2
+    Sleep    1
     Click Button    id=btnLogin 
     Element Text Should Be    id=msgE    Please enter a valid email    
     Sleep    2   
@@ -38,7 +40,8 @@ Validate Password Test
     Create Webdriver    ${BROWSER}     executable_path=C:/Program Files/Python/Scripts/chromedriver.exe
     Go To   ${LOGIN URL} 
     Set Browser Implicit Wait    4
-    Input Text    id=email    vylethe@gmail.com
+    Input Text    id=email    hoanggnhungg99@gmail.com
+    Sleep    1
     Input Password    id=password    123456
     Sleep    2
     Click Button    id=btnLogin 
@@ -78,7 +81,7 @@ Email is not empty and Password is empty Test
     Create Webdriver    ${BROWSER}     executable_path=C:/Program Files/Python/Scripts/chromedriver.exe
     Go To   ${LOGIN URL} 
     Set Browser Implicit Wait    4
-    Input Text    id=email    vylethe@gmail.com
+    Input Text    id=email    hoanggnhungg99@gmail.com
     Sleep    2
     Click Button    id=btnLogin 
     Element Text Should Be    id=msgP    Password is Mandatory Field    
@@ -91,14 +94,16 @@ Remmember me Test
     Create Webdriver    ${BROWSER}     executable_path=C:/Program Files/Python/Scripts/chromedriver.exe
     Go To   ${LOGIN URL} 
     Set Browser Implicit Wait    4
-    Input Text     id=email          vylethe@gmail.com
+    Input Text     id=email          hoanggnhungg99@gmail.com
+    Sleep    1
     Input Password    id=password             123
+    Sleep    1
     Click Element  xpath=(//label[@for='customCheck1'])
     Sleep    2     
     Click Button    id=btnLogin
     Sleep    1
     Click Link    Back login
-    Element Attribute Value Should Be    id=email    value    vylethe@gmail.com
+    Element Attribute Value Should Be    id=email    value    hoanggnhungg99@gmail.com
     Element Attribute Value Should Be    id=password    value    123
     Sleep    2   
     Close Browser
